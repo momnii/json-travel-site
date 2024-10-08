@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+crossorigin=""/>
+
+<link rel="stylesheet" href="css/styles.css">
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <script src="js/meinAjax.js" defer></script>
+     <script src="js/meins.js" defer></script>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>TG</b> Travel Guide</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Places</a>
+      <a href="#highlight" class="w3-bar-item w3-button">Plan</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="img/homepage.jpg" alt="Urlaubsort" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>TG</b></span> <span class="w3-hide-small w3-text-light-grey">PLAN YOUR NEXT TRIP!</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Places</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Spain</div>
+        <img src="img/Spain.jpg" alt="House">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">England</div>
+        <img src="img/England.jpg" alt="House">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">France</div>
+        <img src="img/France.jpg" alt="House">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Germany</div>
+        <img src="img/Germany.jpg" alt="House" >
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Greece</div>
+        <img src="img/Greece.jpg" alt="House" >
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Italien</div>
+        <img src="img/Italy.jpg" alt="House" >
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Schweiz</div>
+        <img src="img/Switzerland.jpg" alt="House" >
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Turkey</div>
+        <img src="img/homepage.jpg" alt="House">
+      </div>
+    </div>
+  </div>
+ <!-- Map Section -->
+  <div class="w3-container w3-padding-32">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Map</h3>
+  <div id="map"></div>
+</div>
+
+<!-- Select Box -->
+<div class="w3-container w3-padding-32"id="highlight" >
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Choose a Country</h3>
+  <select id="countrySelect" class="w3-select w3-border">
+    <option value="">Choose</option>
+    <option value="Spain">Spain</option>
+    <option value="England">England</option>
+    <option value="France">France</option>
+    <option value="Germany">Germany</option>
+    <option value="Greece">Greece</option>
+    <option value="Italy">Italy</option>
+    <option value="Switzerland">Switzerland</option>
+    <option value="Turkey">Turkey</option>
+  </select>
+  <p id="output" class="w3-padding-16"></p>
+</div>
+
+<!-- Radio Button Section -->
+<div class="w3-container w3-padding-32" >
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Budget Planner</h3>
+  
+  <article>
+<!--<p>Kriterium: Medium</p>-->
+   <select onchange="filtern(this.value)" class="w3-select w3-border">
+      <option value="">Choose</option>
+      <option value="Spain">Spain</option>
+      <option value="England">England</option>
+      <option value="France">France</option>
+      <option value="Germany">Germany</option>
+      <option value="Greece">Greece</option>
+      <option value="Italy">Italy</option>
+      <option value="Switzerland">Switzerland</option>
+      <option value="Turkey">Turkey</option>
+ 
+  </select>
+
+    <h3 id="headline1">Result</h3>
+      <section  id="ausgabeContentFilter"></section>
+ </article> 
+
+</div>
+
+<!-- Perfect Vacation Destination -->
+ 
+
+<article>
+  <div class="w3-container w3-padding-32" >
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">When & Where?</h3>
+<p>Please choose both criterias.</p> 
+<br>
+ <select onchange="ersteAuswahl(this.value)" class="w3-select w3-border">
+    <option value="">choose</option>
+    <option value="Beach Vacation">Beach Vacation</option>
+    <option value="City Trip">City Trip</option>
+    <option value="Nature">Nature & Hiking</option>
+    <option value="Culture">Culture & History</option>
+</select>
+<br><br>
+ <select onchange="zweiteAuswahl(this.value)" class="w3-select w3-border">
+    <option value="">choose</option>
+    <option value="Spring">Spring</option>
+    <option value="Summer">Summer</option>
+    <option value="Autumn">Autumn</option>
+    <option value="Winter">Winter</option>
+</select>
+<br><br>
+<button onclick="filtern2aruments()" >send</button>  
+
+  <h3 id="headline2" class="w3-border-bottom w3-border-light-grey w3-padding-16">Recommendation</h3>
+    <section id="ausgabeContentFilter2"></section>
+</article> 
+</div>
+
+<!-- About Section -->
+<div class="w3-container" style="padding: 32px;" id="about">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  
+  <!-- Team Section -->
+  <div class="w3-row-padding w3-grayscale" style="margin-top: 16px;">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="img/man.png" alt="John" style="width:auto; height: 150px;">
+      <h3>John Doe</h3>
+      <p class="w3-opacity">CEO & Founder</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container" style="padding: 32px;">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+  <p>Lets get in touch and talk about your next project.</p>
+  <form action="/action_page.php" target="_blank">
+    <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+    <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+    <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+    <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+    <button class="w3-button w3-black w3-section" type="submit" onclick="message()">
+      <i class="fa fa-paper-plane"></i> SEND MESSAGE
+    </button>
+  </form>
+</div>
+
+<p id="message"></p>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+</body>
+</html>

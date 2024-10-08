@@ -1,0 +1,58 @@
+{
+    "collection": {
+      "name": "Beispielsammlung",
+      "bild": "https://www.geographie.ruhr-uni-bochum.de/mam/didaktik/fittosize_1078_0_199_132_27757c72b72250dc677dfffddf3ee877_didaktik-mediensammlung-small.jpg",
+      "url": "http://sammlung.kurz.de",
+	  "verantwortlich": "Elisabeth Musterfrau", 
+      "item": [
+         {
+             "format": "Spain",
+             "price": "500.000€",
+             "type": "Beach Vacation",
+             "season": "Summer"
+           },
+          {
+             "format": "England",
+             "price": "800.000€",
+             "type": "City Trip",
+             "season": "Winter"
+          },
+           {
+             "format": "France",
+             "price": "120.000€",
+             "type": "Culture",
+             "season": "Autumn"
+          },
+          {
+            "format": "Italy",
+            "price": "500.000€",
+            "type": "Culture",
+            "season": "Summer"
+         },
+         {
+            "format": "Germany",
+            "price": "800.000€",
+            "type": "Nature",
+            "season": "Spring"
+         },
+         {
+            "format": "Greece",
+            "price": "200.000€",
+            "type": "Beach Vacation",
+            "season": "Summer"
+         },
+         {
+            "format": "Switzerland",
+            "price": "500.000€",
+            "type": "Nature",
+            "season": "Summer"
+         },
+          {
+             "format": "Turkey",
+             "price": "800€/Monat",
+             "type": "Beach Vacation",
+             "season": "Summer"
+          }
+       ]
+    }
+ }
